@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout/index :: dynamic(~{::main})}">
+
+
+<body>
+    <main>
+       <div class="panel panel-primary shopping-shopping" th:fragment="shopping-cart">
+        <div class="panel-heading shopping-heading">
+            <b>GIỎ HÀNG</b>
+        </div>
+        <hr>
+        <table class="table table-hover shopping-hover">
+            <thead>
+                <tr class="tr">
+                    <th>Id</th>
+                    <th>Images</th>
+                    <th>Tên Sản Phẩm</th>
+                    <th>Giá Sản Phẩm</th>
+                    <th>Số Lượng</th>
+                    <th>Tổng Tiền</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in cart.items">
+                    <td>{{item.id}}</td>
+                    <td>{{item.image}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.price | number : 2}}</td>
+                    <td><input ng-change="cart.saveToLocalStorage()" ng-model="item.qty" type="number" min="1"
+                            style="width:94%"></td>
+                    <td>{{item.qty*item.price | number : 2}}</td>
+                    <td class="XOA"><button ng-click="cart.remove(item.id)" class="btn btn-sm btn-danger" id="XOA">Xóa
+                            <i class="glyphicon glyphicon-trash"></i>
+                        </button></td>
+                </tr>
+
+            </tbody>
+        </table>
+        <hr>
+        <div class="panel-footer shopping-footer">
+            
+            <a th:href="@{/order/checkout}" class="btn btn-primary shopping-primary">
+                <i class="glyphicon glyphicon-hand-right"></i><b>Mua Hàng</b>
+            </a>
+            <button ng-click="cart.clear()" class="btn btn-danger shopping-danger">
+                <i class="glyphicon glyphicon-trash"></i><b>Clear</b>
+            </button>
+        </div>
+    </div>
+    </main>
+</body>
+
+</html>

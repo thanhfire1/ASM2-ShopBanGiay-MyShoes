@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+	border:1px solid #000;
+  padding: 8px;
+  text-align: center;
+  font-size:1.5rem;
+}
+
+.test {
+  background-color: #279ef3 ;
+}
+table td th{
+  background-color: #fff ;
+}
+
+    </style>
+</head>
+<body>
+    <div style= "margin-top:200px; margin-bottom: 200px">
+        <div >AUTHORITY</div>
+        <table>
+            <thead class="bg-success" style="font-variant:small-caps ;">
+                <tr class="test">
+                    <th>Fullname</th>
+                    <th ng-repeat="role in roles" class="text-center">{{role.name}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="acc in admins">
+                    <td>{{acc.fullname}}</td>
+                    <th ng-repeat="role in roles" class="text-center">
+                        <input ng-checked="authority_of(acc,role)" ng-click="authority_changed(acc,role)" type="checkbox">
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

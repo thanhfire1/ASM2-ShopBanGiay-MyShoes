@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+
+.ps-sidebar-header {
+    margin-left: 10px;
+    margin-bottom: 20px;
+    
+}
+.ps-sidebar-header h3 {
+    color: grey;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.ps-post-sidebar {
+    min-height: 120px;
+    width: 100%;
+    
+}
+.ps-box-sidebar p {
+    font-size: 15px;
+}
+.ps-image-sidebar {
+    float: left;
+    min-height: 100%;
+    width: 25%;
+    display: contents;
+
+}
+.ps-image-sidebar img {
+    width: 80px;
+    margin-top: 5px;
+}
+.ps-box-sidebar {
+    width: 75%;
+    float: right;
+    min-height: 100%;
+
+}
+.ps-box-sidebar span {
+    font-size: 12px;
+   
+}
+
+/*Đánh giá cho sidebar*/
+div.stars-sidebar {
+    width: 200px;
+    display: inline-block;
+}
+   
+input.star-sidebar { 
+    display: none; 
+    margin: -10px 0px 10px 5px; 
+}
+
+.stars-sidebar {
+    margin-left: -110px;
+    margin-top: -20px;
+}
+
+label.star-sidebar {
+    float: right;
+    padding: 2px;
+    font-size: 15px;
+    color: #444;
+    transition: all .2s;
+}
+   
+input.star-sidebar ~ label.star-sidebar:before {
+    content: '\f005';
+    color: #FFCC00;
+    transition: all .25s;
+}
+
+   
+input.star-sidebar-5 ~ label.star-sidebar:before {
+    color: #FFCC00;
+    text-shadow: 0 0 20px #952;
+}
+   
+input.star-sidebar-1:checked ~ label.star-sidebar:before { color: #F62; }
+   
+label.star-sidebar:hover { transform: rotate(-15deg) scale(1.3); }
+   
+label.star-sidebar:before {
+    content: '\f006';
+    font-family: FontAwesome;
+}
+
+strong {
+    color: #CC0000;
+}

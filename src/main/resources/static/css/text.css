@@ -1,0 +1,13 @@
+    div.row div.col{
+    border: 2px solid pink;
+}
+div.row div.col-6{
+    border: 2px solid pink;
+}
+div.row div.col-5{
+    border: 2px solid pink;
+}
+
+body{
+    background: black;
+}

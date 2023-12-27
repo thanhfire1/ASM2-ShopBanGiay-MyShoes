@@ -1,0 +1,119 @@
+
+
+/*buttun*/
+.buttons_added {
+    opacity:1;
+    display:inline-block;
+    display:-ms-inline-flexbox;
+    display:inline-flex;
+    white-space:nowrap;
+    vertical-align:top;
+}
+.is-form {
+    overflow:hidden;
+    position:relative;
+    background-color:#f9f9f9;
+    height:2.2rem;
+    width:1.9rem;
+    padding:0;
+    text-shadow:1px 1px 1px #fff;
+    border:1px solid #ddd;
+}
+.is-form:focus,.input-text:focus {
+    outline:none;
+}
+.is-form.minus {
+    border-radius:4px 0 0 4px;
+}
+.is-form.plus {
+    border-radius:0 4px 4px 0;
+}
+.input-qty {
+    background-color:#fff;
+    height:2.2rem;
+    text-align:center;
+    font-size:1rem;
+    display:inline-block;
+    vertical-align:top;
+    margin:0;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    border-left:0;
+    border-right:0;
+    padding:0;
+}
+.input-qty::-webkit-outer-spin-button,.input-qty::-webkit-inner-spin-button {
+    -webkit-appearance:none;
+    margin:0;
+}
+tr{
+    vertical-align: middle;
+}
+th{
+    text-align: center;
+}
+img{
+    width: 100px;
+    height: 100px;
+}
+#mau{
+    margin-right: 50px ;
+}
+.tensp{
+    text-align: center;
+}
+td{
+    border: 10px ;
+}
+.navbar-brand img {
+    width: 155px ;
+    height: 50px;
+}
+.carousel-item img{
+    width: 300px ; 
+    height: 500px;
+}
+.nav-link dropdown-toggle{
+    color: black;
+}
+.nav-item dropdown{
+    color: black;
+}
+/*Thanh menu hover*/
+
+.nav-item dropdown .nav-link active .dropdown-menu .dropdown-item li:hover>a {
+    /* border-bottom: 1px solid rgb(226, 147, 118); */
+    background-color: orange;
+    /*border-radius: 30px;*/
+}
+
+/*body {
+    background: orange;
+    background: linear-gradient(to right, rgb(233, 233, 228), rgb(253, 233, 6));
+  }*/
+  
+  .btn-login {
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    padding: 0.75rem 1rem;
+  }
+  
+  .btn-google {
+    color: black !important;
+    
+    background: linear-gradient(to right, rgb(233, 233, 228), rgb(253, 233, 6));
+    border: black;
+  }
+  
+  .btn-facebook {
+    color: black !important;
+   
+    background: linear-gradient(to right,  rgb(253, 233, 6) , rgb(233, 233, 228));
+    border: 1px black;
+}
+
+.card-title text-center mb-5 fw-light fs-5{
+    color: black;
+    
+}
+

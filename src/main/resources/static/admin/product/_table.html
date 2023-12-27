@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+    table {
+  width: 100%;
+  border-collapse: collapse;
+  
+}
+
+table th, table td {
+  border: 1px solid #000;
+  padding: 8px;
+  text-align: center;
+  font-size:1.4rem;
+}
+
+table th {
+  background-color: #279ef3;
+}
+
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+
+    </style>
+</head>
+<body>
+	<div >
+    
+	<div class="table-responsive">
+                                <table width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Id</th>
+                                            <th>Name</th>
+                                            <th>Price</th>
+                                            <th>Date</th>
+                                            <th>Image</th>
+                                            <th>Category</th>
+                                            <th>Available</th>
+                                            <th>Edit</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Hiển thị dữ liệu của khách hàng trong bảng -->
+                                        <tr ng-repeat="item in pager.items">
+                                            <td>{{item.id}}</td>
+                							<td>{{item.name}}</td>
+                							<td>{{item.price | number :2}}$</td>
+                							<td>{{item.createDate | date:'dd-MM-yyyy'}}</td>
+                							<td>{{item.image}}</td>
+                							<td>{{item.category.name}}</td>
+                							<td>{{item.available?'Yes':'No'}}</td>
+                                            <td>
+                                           
+                                                <div >
+                                                    <button style="	font-size:1.8rem;" ng-click="edit(item)" class="las la-wrench"></button>
+                                                    <button style="	font-size:1.8rem;" ng-click="delete(item)" class="fa fa-trash"></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- Thêm dữ liệu khách hàng khác tương tự -->
+                                    </tbody>
+                                    
+                                </table>
+                                <div class="panel-footer text-center">
+        <button ng-click="pager.first()" class="">
+			<b style="	font-size:2rem;" class="	fa fa-arrow-up"></b>
+		</button>
+        <button ng-click="pager.prev()" class="">
+			<b style="	font-size:2rem;" class="fa fa-arrow-left"></b>
+		</button>
+        <button style="border:none;"  class="">{{pager.page + 1}} of {{pager.count}}</button>
+        <button ng-click="pager.next()" class="">
+			<b style="	font-size:2rem;" class="		fa fa-arrow-right"></b>
+		</button>
+        <button ng-click="pager.last()" class="">
+			<b style="	font-size:2rem;" class="fa fa-arrow-down"></b>
+		</button>
+    </div>
+    </div>
+    </div>
+    
+	
+    
+</body>
+</html>
+
